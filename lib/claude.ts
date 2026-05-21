@@ -35,30 +35,30 @@ export async function generateColdEmail(input: EmailGeneratorInput) {
   const toneDesc = TONE_DESCRIPTIONS[input.tone];
   const typeDesc = EMAIL_TYPE_DESCRIPTIONS[input.emailType];
 
-  const prompt = `You are an expert cold email copywriter who writes emails with high reply rates.
+  const prompt = `You are an expert cold email copywriter specialized in real estate outreach — including agent prospecting, homeowner contact, investor outreach, expired listings, FSBOs, and referral partner development.
 
 Generate ${input.variants} distinct ${typeDesc} variant(s) with a ${toneDesc} tone.
 
 PROSPECT INFO:
 - Name: ${input.prospectName}
-- Company: ${input.prospectCompany}
+- Company / Property: ${input.prospectCompany}
 - Role: ${input.prospectRole}
-- Industry: ${input.industry}
-- Pain Point / Challenge: ${input.painPoint}
+- Market / Property Type: ${input.industry}
+- Pain Point / Situation: ${input.painPoint}
 
 SENDER INFO:
-- Your Name: ${input.yourName}
-- Your Offer: ${input.yourOffer}
+- Agent Name: ${input.yourName}
+- Your Offer / Value Prop: ${input.yourOffer}
 - Call to Action: ${input.cta}
 
 RULES:
-- Subject line must create curiosity or speak directly to their pain
+- Subject line must reference a specific detail (address, days on market, neighborhood) or create curiosity
 - Opening line must NOT start with "I" or "My name is"
 - Body must be under 150 words (except LinkedIn which should be under 300 chars)
 - One clear CTA only
-- No fluff, no generic lines like "I hope this finds you well"
-- Make it feel human, not AI-generated
-- Personalize based on their role and industry
+- No fluff, no generic lines like "I hope this finds you well" or "I wanted to reach out"
+- Reference local market knowledge, property specifics, or timing where relevant
+- Make it feel like it came from a local expert, not a script
 
 OUTPUT FORMAT (for each variant):
 ---VARIANT [number]---
@@ -92,30 +92,31 @@ export interface SequenceEmail {
 export async function generateEmailSequence(input: EmailGeneratorInput): Promise<SequenceEmail[]> {
   const toneDesc = TONE_DESCRIPTIONS[input.tone];
 
-  const prompt = `You are an expert cold email copywriter. Write a 3-email cold outreach sequence with a ${toneDesc} tone.
+  const prompt = `You are an expert cold email copywriter specialized in real estate outreach — including agent prospecting, homeowner contact, investor outreach, expired listings, FSBOs, and referral partner development. Write a 3-email cold outreach sequence with a ${toneDesc} tone.
 
 PROSPECT INFO:
 - Name: ${input.prospectName}
-- Company: ${input.prospectCompany}
+- Company / Property: ${input.prospectCompany}
 - Role: ${input.prospectRole}
-- Industry: ${input.industry}
-- Pain Point: ${input.painPoint}
+- Market / Property Type: ${input.industry}
+- Pain Point / Situation: ${input.painPoint}
 
 SENDER INFO:
-- Your Name: ${input.yourName}
-- Your Offer: ${input.yourOffer}
+- Agent Name: ${input.yourName}
+- Your Offer / Value Prop: ${input.yourOffer}
 - Call to Action: ${input.cta}
 
 SEQUENCE STRUCTURE:
-Email 1 (Day 0) — Cold Outreach: First touch. Personalized hook, clear value prop, soft CTA.
-Email 2 (Day 3) — Follow-Up: Short, references Email 1, adds one new insight or social proof. Different angle.
-Email 3 (Day 7) — Break-Up: Final attempt. Low pressure. Make them feel they're losing something.
+Email 1 (Day 0) — Cold Outreach: First touch. Reference a specific property detail or market stat. Soft CTA.
+Email 2 (Day 3) — Follow-Up: Short, references Email 1, adds one new insight (price reduction, comparable sale, market shift). Different angle.
+Email 3 (Day 7) — Break-Up: Final attempt. Low pressure. Make them feel the window is closing (market timing, competing offers, season).
 
 RULES FOR ALL EMAILS:
 - Never start with "I" or "My name is"
 - Under 120 words each
 - No "I hope this finds you well"
 - Each email must feel distinct — not just a copy-paste with minor changes
+- Reference local market knowledge or property specifics where possible
 - Human, not AI-generated sounding
 
 OUTPUT FORMAT (exactly this, nothing else):

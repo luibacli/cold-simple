@@ -1,13 +1,9 @@
 import Link from "next/link";
 import { ConnectGmail } from "@/components/ConnectGmail";
 import { ConnectMicrosoft } from "@/components/ConnectMicrosoft";
-import { Zap, ArrowLeft, Info } from "lucide-react";
+import { Zap, ArrowLeft } from "lucide-react";
 
 export default function SettingsPage() {
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3001";
-  const gmailCallback = `${appUrl}/api/auth/google/callback`;
-  const microsoftCallback = `${appUrl}/api/auth/microsoft/callback`;
-
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -41,33 +37,6 @@ export default function SettingsPage() {
           <ConnectGmail />
         </section>
 
-        {/* Gmail Setup Guide */}
-        <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center gap-2 mb-4">
-            <Info className="w-4 h-4 text-indigo-500 shrink-0" />
-            <h2 className="text-sm font-semibold text-gray-800">Gmail — Google Cloud Setup</h2>
-          </div>
-          <ol className="space-y-3.5 text-sm text-gray-600">
-            <SetupStep n={1}>
-              Go to <b>console.cloud.google.com</b> → Create a new project
-            </SetupStep>
-            <SetupStep n={2}>
-              Enable the <b>Gmail API</b> from APIs &amp; Services → Library
-            </SetupStep>
-            <SetupStep n={3}>
-              Go to <b>APIs &amp; Services → Credentials</b> → Create OAuth 2.0 Client ID (Web application)
-            </SetupStep>
-            <SetupStep n={4}>
-              Add this authorized redirect URI:
-              <CodeBlock>{gmailCallback}</CodeBlock>
-            </SetupStep>
-            <SetupStep n={5}>
-              Add to <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs">.env.local</code>:
-              <CodeBlock>{`GOOGLE_CLIENT_ID=your_client_id\nGOOGLE_CLIENT_SECRET=your_client_secret`}</CodeBlock>
-            </SetupStep>
-          </ol>
-        </section>
-
         {/* --- Outlook / Microsoft --- */}
         <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
           <h2 className="text-base font-semibold text-gray-800 mb-1">Outlook / Office 365</h2>
@@ -77,57 +46,8 @@ export default function SettingsPage() {
           <ConnectMicrosoft />
         </section>
 
-        {/* Microsoft Setup Guide */}
-        <section className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center gap-2 mb-4">
-            <Info className="w-4 h-4 text-blue-500 shrink-0" />
-            <h2 className="text-sm font-semibold text-gray-800">Outlook — Azure App Setup</h2>
-          </div>
-          <ol className="space-y-3.5 text-sm text-gray-600">
-            <SetupStep n={1}>
-              Go to <b>portal.azure.com</b> → Azure Active Directory → App registrations → New registration
-            </SetupStep>
-            <SetupStep n={2}>
-              Set <b>Supported account types</b> to{" "}
-              <em>Accounts in any organizational directory and personal Microsoft accounts</em>
-            </SetupStep>
-            <SetupStep n={3}>
-              Under <b>Authentication</b>, add this redirect URI (type: Web):
-              <CodeBlock>{microsoftCallback}</CodeBlock>
-            </SetupStep>
-            <SetupStep n={4}>
-              Under <b>API permissions</b>, add: <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs">Mail.Send</code>{" "}
-              and <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs">User.Read</code> (both Delegated)
-            </SetupStep>
-            <SetupStep n={5}>
-              Under <b>Certificates &amp; secrets</b>, create a new client secret
-            </SetupStep>
-            <SetupStep n={6}>
-              Add to <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs">.env.local</code>:
-              <CodeBlock>{`MICROSOFT_CLIENT_ID=your_application_id\nMICROSOFT_CLIENT_SECRET=your_client_secret_value`}</CodeBlock>
-            </SetupStep>
-          </ol>
-        </section>
       </main>
     </div>
   );
 }
 
-function SetupStep({ n, children }: { n: number; children: React.ReactNode }) {
-  return (
-    <li className="flex gap-3">
-      <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-        {n}
-      </span>
-      <span className="leading-relaxed">{children}</span>
-    </li>
-  );
-}
-
-function CodeBlock({ children }: { children: string }) {
-  return (
-    <code className="block mt-1.5 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-xs text-indigo-700 font-mono break-all whitespace-pre">
-      {children}
-    </code>
-  );
-}

@@ -7,42 +7,42 @@ const FEATURES = [
   {
     icon: Zap,
     title: "Generate in 10 seconds",
-    desc: "Fill in your prospect details and get a battle-tested cold email instantly.",
+    desc: "Fill in your prospect's details and get a battle-tested outreach email instantly.",
   },
   {
     icon: Target,
-    title: "Hyper-personalized",
-    desc: "Every email is tailored to the prospect's role, industry, and specific pain points.",
+    title: "Built for real estate",
+    desc: "Tailored for homeowners, investors, landlords, and referral partners — not generic sales copy.",
   },
   {
     icon: TrendingUp,
-    title: "Higher reply rates",
-    desc: "Built on proven cold email frameworks used by top sales teams worldwide.",
+    title: "Win more listings",
+    desc: "Built on proven outreach frameworks used by top-producing agents and real estate teams.",
   },
   {
     icon: Clock,
-    title: "Multiple variants",
-    desc: "A/B test different tones and angles to find what converts best for your audience.",
+    title: "Every prospect type",
+    desc: "Cold outreach, follow-ups, and LinkedIn DMs — for FSBOs, expired listings, and investors alike.",
   },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Marcus T.",
-    role: "Founder, B2B SaaS",
-    body: "I went from spending 30 min per email to 30 seconds. My reply rate jumped from 3% to 11%.",
+    name: "Sarah M.",
+    role: "Real Estate Agent, Miami",
+    body: "I was spending 2 hours a day writing cold emails. Now it takes 15 minutes and my listing appointments doubled.",
     stars: 5,
   },
   {
-    name: "Sarah K.",
-    role: "Sales Lead, Agency",
-    body: "The direct tone option is fire. We booked 8 calls in the first week just from cold email.",
+    name: "Carlos R.",
+    role: "Property Investor, Texas",
+    body: "Used this to reach landlords directly. Closed 2 off-market deals in my first month. Insane ROI.",
     stars: 5,
   },
   {
-    name: "James R.",
-    role: "Freelance Consultant",
-    body: "Best $19 I spend every month. My pipeline literally doubled in 6 weeks.",
+    name: "Amanda T.",
+    role: "Real Estate Team Lead",
+    body: "My whole team uses this now. Our cold outreach reply rate went from 4% to 14% in 6 weeks.",
     stars: 5,
   },
 ];
@@ -87,15 +87,15 @@ export default function HomePage() {
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-24 text-center">
         <Badge className="bg-indigo-50 text-indigo-700 border border-indigo-200 mb-6 px-3 py-1 font-medium">
-          Powered by Claude AI
+          Built for Real Estate Agents
         </Badge>
         <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight mb-6">
-          Cold emails that actually{" "}
-          <span className="text-indigo-600">get replies</span>
+          Cold emails that win{" "}
+          <span className="text-indigo-600">real estate clients</span>
         </h1>
         <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Stop staring at a blank page. Write hyper-personalized cold emails in 10 seconds — tailored to your
-          prospect&apos;s pain points, role, and industry.
+          Stop losing listings to competitors. Write hyper-personalized cold emails to homeowners, investors,
+          and referral partners in 10 seconds — powered by AI.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link href="/dashboard">
@@ -131,24 +131,24 @@ export default function HomePage() {
             <div className="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p className="text-xs text-gray-400 font-medium mb-1 uppercase tracking-wide">Subject</p>
               <p className="text-sm font-semibold text-gray-800">
-                Quick question about Acme Corp&apos;s outbound
+                Quick question about 142 Maple St
               </p>
             </div>
             <div className="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p className="text-xs text-gray-400 font-medium mb-2 uppercase tracking-wide">Body</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Hey Alex,
+                Hey Maria,
                 <br />
                 <br />
-                Noticed Acme Corp just expanded the sales team — congrats. Most heads of sales I talk to at that
-                stage hit the same wall: more reps, but outbound still feels like a grind.
+                Noticed 142 Maple St has been on the market for 52 days. Homes in that zip are moving in under
+                18 days right now — so something&apos;s off with the positioning.
                 <br />
                 <br />
-                We help B2B SaaS companies book 20+ demos/month using AI-assisted outbound — without a big SDR
-                team.
+                I&apos;ve helped 3 homeowners on your street sell above asking this quarter. Usually comes down
+                to one or two small fixes.
                 <br />
                 <br />
-                Worth a 15-min chat this week?
+                Worth a 10-min chat to see if I can get you a better outcome?
                 <br />
                 <br />— Jordan
               </p>
@@ -162,10 +162,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">
-              Everything you need to win in the inbox
+              Everything you need to win more listings
             </h2>
             <p className="text-gray-500">
-              Built for founders, sales reps, and agencies who live and die by cold email.
+              Built for real estate agents, investors, and teams who grow their business through cold outreach.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -187,7 +187,7 @@ export default function HomePage() {
 
       {/* Social Proof */}
       <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Loved by sales teams</h2>
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Loved by real estate pros</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TESTIMONIALS.map((t) => (
             <div key={t.name} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
@@ -210,7 +210,7 @@ export default function HomePage() {
       <section className="bg-indigo-600 py-20">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Start writing better cold emails today
+            Start winning more listings today
           </h2>
           <p className="text-indigo-200 mb-8">5 free emails every month. No credit card required.</p>
           <Link href="/dashboard">

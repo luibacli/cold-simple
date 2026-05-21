@@ -108,24 +108,24 @@ export function EmailGenerator({ defaultMode = "single" }: EmailGeneratorProps) 
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">
                   <Label className="text-xs">First Name</Label>
-                  <Input placeholder="Alex" value={form.prospectName} onChange={(e) => set("prospectName", e.target.value)} className="h-9 text-sm" />
+                  <Input placeholder="Maria" value={form.prospectName} onChange={(e) => set("prospectName", e.target.value)} className="h-9 text-sm" />
                 </div>
                 <div className="space-y-1.5">
-                  <Label className="text-xs">Company</Label>
-                  <Input placeholder="Acme Corp" value={form.prospectCompany} onChange={(e) => set("prospectCompany", e.target.value)} className="h-9 text-sm" />
+                  <Label className="text-xs">Property / Company</Label>
+                  <Input placeholder="142 Maple St" value={form.prospectCompany} onChange={(e) => set("prospectCompany", e.target.value)} className="h-9 text-sm" />
                 </div>
                 <div className="space-y-1.5">
-                  <Label className="text-xs">Role / Title</Label>
-                  <Input placeholder="Head of Sales" value={form.prospectRole} onChange={(e) => set("prospectRole", e.target.value)} className="h-9 text-sm" />
+                  <Label className="text-xs">Prospect Type</Label>
+                  <Input placeholder="Homeowner / Investor / FSBO" value={form.prospectRole} onChange={(e) => set("prospectRole", e.target.value)} className="h-9 text-sm" />
                 </div>
                 <div className="space-y-1.5">
-                  <Label className="text-xs">Industry</Label>
-                  <Input placeholder="SaaS / E-commerce" value={form.industry} onChange={(e) => set("industry", e.target.value)} className="h-9 text-sm" />
+                  <Label className="text-xs">Market / Property Type</Label>
+                  <Input placeholder="Residential, Miami / Commercial, TX" value={form.industry} onChange={(e) => set("industry", e.target.value)} className="h-9 text-sm" />
                 </div>
               </div>
               <div className="mt-3 space-y-1.5">
-                <Label className="text-xs">Their Main Pain Point</Label>
-                <Textarea placeholder="e.g. Struggling to scale outbound without a big team" value={form.painPoint} onChange={(e) => set("painPoint", e.target.value)} className="text-sm resize-none h-20" />
+                <Label className="text-xs">Their Situation / Pain Point</Label>
+                <Textarea placeholder="e.g. Property has been on market 52 days, overpriced, FSBO struggling to get showings" value={form.painPoint} onChange={(e) => set("painPoint", e.target.value)} className="text-sm resize-none h-20" />
               </div>
             </div>
 
@@ -140,12 +140,12 @@ export function EmailGenerator({ defaultMode = "single" }: EmailGeneratorProps) 
                   <Input placeholder="Jordan" value={form.yourName} onChange={(e) => set("yourName", e.target.value)} className="h-9 text-sm" />
                 </div>
                 <div className="space-y-1.5">
-                  <Label className="text-xs">What You Do / Your Offer</Label>
-                  <Textarea placeholder="e.g. We help SaaS companies book 20+ demos/month using AI-powered outbound" value={form.yourOffer} onChange={(e) => set("yourOffer", e.target.value)} className="text-sm resize-none h-20" />
+                  <Label className="text-xs">Your Offer / Value Prop</Label>
+                  <Textarea placeholder="e.g. I help homeowners in Miami sell above asking — sold 3 homes on Maple St this quarter" value={form.yourOffer} onChange={(e) => set("yourOffer", e.target.value)} className="text-sm resize-none h-20" />
                 </div>
                 <div className="space-y-1.5">
                   <Label className="text-xs">Call to Action</Label>
-                  <Input placeholder="Book a 15-min call / Reply with interest" value={form.cta} onChange={(e) => set("cta", e.target.value)} className="h-9 text-sm" />
+                  <Input placeholder="Schedule a 10-min call / See your free home valuation" value={form.cta} onChange={(e) => set("cta", e.target.value)} className="h-9 text-sm" />
                 </div>
               </div>
             </div>
