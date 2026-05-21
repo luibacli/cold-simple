@@ -10,7 +10,7 @@ export default function PrivacyPage() {
             <div className="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-gray-900 text-lg">MailBlitz</span>
+            <span className="font-bold text-gray-900 text-lg">ColdSimple</span>
           </Link>
         </div>
       </nav>
@@ -53,12 +53,12 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">6. Contact</h2>
-            <p>Questions? Email us at <a href="mailto:support@mailblitz.app" className="text-indigo-600 hover:underline">support@mailblitz.app</a></p>
+            <p>Questions? Email us at <a href="mailto:support@coldsimple.app" className="text-indigo-600 hover:underline">support@coldsimple.app</a></p>
           </section>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-100">
-          <Link href="/" className="text-sm text-indigo-600 hover:text-indigo-800">← Back to MailBlitz</Link>
+          <Link href="/" className="text-sm text-indigo-600 hover:text-indigo-800">← Back to ColdSimple</Link>
         </div>
       </main>
     </div>

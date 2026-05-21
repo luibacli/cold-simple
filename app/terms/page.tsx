@@ -10,7 +10,7 @@ export default function TermsPage() {
             <div className="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-gray-900 text-lg">MailBlitz</span>
+            <span className="font-bold text-gray-900 text-lg">ColdSimple</span>
           </Link>
         </div>
       </nav>
@@ -22,17 +22,17 @@ export default function TermsPage() {
         <div className="prose prose-gray max-w-none space-y-8 text-sm text-gray-600 leading-relaxed">
           <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">1. Acceptance</h2>
-            <p>By creating an account or using MailBlitz you agree to these terms. If you do not agree, do not use the service.</p>
+            <p>By creating an account or using ColdSimple you agree to these terms. If you do not agree, do not use the service.</p>
           </section>
 
           <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">2. The service</h2>
-            <p>MailBlitz provides an AI-assisted tool for drafting cold outreach emails. The output is a starting point — you are responsible for reviewing, editing, and sending any emails you create. We do not guarantee specific reply rates or business outcomes.</p>
+            <p>ColdSimple provides an AI-assisted tool for drafting cold outreach emails. The output is a starting point — you are responsible for reviewing, editing, and sending any emails you create. We do not guarantee specific reply rates or business outcomes.</p>
           </section>
 
           <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">3. Acceptable use</h2>
-            <p>You agree not to use MailBlitz to send spam, illegal content, or any communication that violates CAN-SPAM, GDPR, or applicable anti-spam laws. You are solely responsible for how you use the emails generated.</p>
+            <p>You agree not to use ColdSimple to send spam, illegal content, or any communication that violates CAN-SPAM, GDPR, or applicable anti-spam laws. You are solely responsible for how you use the emails generated.</p>
           </section>
 
           <section>
@@ -47,12 +47,12 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">6. Intellectual property</h2>
-            <p>You own the output generated through your use of MailBlitz. We retain ownership of the platform, code, and product.</p>
+            <p>You own the output generated through your use of ColdSimple. We retain ownership of the platform, code, and product.</p>
           </section>
 
           <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">7. Limitation of liability</h2>
-            <p>MailBlitz is provided &quot;as is.&quot; To the maximum extent permitted by law, we are not liable for indirect, incidental, or consequential damages arising from your use of the service. Our total liability in any month is capped at the amount you paid us that month.</p>
+            <p>ColdSimple is provided &quot;as is.&quot; To the maximum extent permitted by law, we are not liable for indirect, incidental, or consequential damages arising from your use of the service. Our total liability in any month is capped at the amount you paid us that month.</p>
           </section>
 
           <section>
@@ -62,12 +62,12 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">9. Contact</h2>
-            <p>Questions about these terms? Email <a href="mailto:support@mailblitz.app" className="text-indigo-600 hover:underline">support@mailblitz.app</a></p>
+            <p>Questions about these terms? Email <a href="mailto:support@coldsimple.app" className="text-indigo-600 hover:underline">support@coldsimple.app</a></p>
           </section>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-100">
-          <Link href="/" className="text-sm text-indigo-600 hover:text-indigo-800">← Back to MailBlitz</Link>
+          <Link href="/" className="text-sm text-indigo-600 hover:text-indigo-800">← Back to ColdSimple</Link>
         </div>
       </main>
     </div>

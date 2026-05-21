@@ -40,7 +40,7 @@ export default function PricingPage() {
             <div className="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-gray-900 text-lg">MailBlitz</span>
+            <span className="font-bold text-gray-900 text-lg">ColdSimple</span>
           </Link>
           <div className="flex items-center gap-3">
             <Link href="/dashboard">

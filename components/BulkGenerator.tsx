@@ -180,7 +180,7 @@ export function BulkGenerator({ plan }: Props) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "mailblitz-bulk-emails.csv";
+    a.download = "coldsimple-bulk-emails.csv";
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -191,7 +191,7 @@ export function BulkGenerator({ plan }: Props) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "mailblitz-template.csv";
+    a.download = "coldsimple-template.csv";
     a.click();
     URL.revokeObjectURL(url);
   };

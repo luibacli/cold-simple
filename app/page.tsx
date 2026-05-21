@@ -65,7 +65,7 @@ export default function HomePage() {
             <div className="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-gray-900 text-lg">MailBlitz</span>
+            <span className="font-bold text-gray-900 text-lg">ColdSimple</span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
             <Link href="#features" className="hover:text-gray-900 transition-colors">Features</Link>
@@ -231,9 +231,9 @@ export default function HomePage() {
             <div className="w-6 h-6 bg-indigo-600 rounded-md flex items-center justify-center">
               <Zap className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="font-bold text-gray-700">MailBlitz</span>
+            <span className="font-bold text-gray-700">ColdSimple</span>
           </div>
-          <p className="text-xs text-gray-400">© 2026 MailBlitz. All rights reserved.</p>
+          <p className="text-xs text-gray-400">© 2026 ColdSimple. All rights reserved.</p>
           <div className="flex gap-4 text-xs text-gray-400">
             <Link href="/privacy" className="hover:text-gray-600">Privacy</Link>
             <Link href="/terms" className="hover:text-gray-600">Terms</Link>

@@ -78,7 +78,7 @@ export default function SignupPage() {
             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-gray-900 text-xl">MailBlitz</span>
+            <span className="font-bold text-gray-900 text-xl">ColdSimple</span>
           </Link>
           <h1 className="text-2xl font-bold text-gray-900">Create your account</h1>
           <p className="text-sm text-gray-500 mt-1">5 free emails every month</p>

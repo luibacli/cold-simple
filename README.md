@@ -1,4 +1,4 @@
-# MailBlitz
+# ColdSimple
 
 AI-powered cold email writer SaaS. Generate hyper-personalized cold emails, follow-up sequences, and bulk outreach campaigns in seconds — powered by Claude AI.
 
@@ -23,8 +23,8 @@ AI-powered cold email writer SaaS. Generate hyper-personalized cold emails, foll
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/your-username/mailblitz.git
-cd mailblitz
+git clone https://github.com/your-username/coldsimple.git
+cd coldsimple
 npm install
 ```
 
@@ -95,7 +95,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `MICROSOFT_CLIENT_SECRET` | No | Outlook OAuth integration |
 | `NEXT_PUBLIC_SENTRY_DSN` | No | Sentry error monitoring (client) |
 | `SENTRY_DSN` | No | Sentry error monitoring (server) |
-| `NEXT_PUBLIC_APP_URL` | Yes | Full base URL (e.g. `https://mailblitz.app`) |
+| `NEXT_PUBLIC_APP_URL` | Yes | Full base URL (e.g. `https://coldsimple.app`) |
 
 ---
 

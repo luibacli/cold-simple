@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MailBlitz — Cold emails that get replies",
+  title: "ColdSimple — Cold emails that get replies",
   description: "Write hyper-personalized cold emails in 10 seconds using AI. Higher reply rates guaranteed.",
 };
 

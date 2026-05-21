@@ -68,7 +68,7 @@ export default function HistoryPage() {
             <div className="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-gray-900">MailBlitz</span>
+            <span className="font-bold text-gray-900">ColdSimple</span>
           </Link>
         </div>
       </header>
